@@ -1,0 +1,57 @@
+.content-page {
+    padding: var(--space-8) 0 var(--space-20);
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: var(--space-12);
+    padding-top: var(--space-8);
+}
+
+.page-title {
+    font-size: var(--text-5xl);
+    font-weight: 600;
+    margin-bottom: var(--space-4);
+    background: linear-gradient(135deg, var(--color-text-primary) 0%, var(--color-accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.page-description {
+    font-size: var(--text-lg);
+    color: var(--color-text-secondary);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Category Filter */
+.category-filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-bottom: var(--space-10);
+}
+
+.filter-btn {
+    padding: var(--space-2) var(--space-5);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    transition: all var(--transition-base);
+}
+
+.filter-btn:hover {
+    color: var(--color-text-primary);
+    border-color: var(--color-border-hover);
+}
+
+.filter-btn.active {
+    color: var(--color-bg-primary);
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+}

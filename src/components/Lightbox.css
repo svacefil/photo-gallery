@@ -1,0 +1,134 @@
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-8);
+}
+
+.lightbox-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lightbox-image {
+    max-width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+}
+
+.lightbox-info {
+    text-align: center;
+    padding: var(--space-6) 0;
+}
+
+.lightbox-title {
+    font-size: var(--text-xl);
+    font-weight: 500;
+    margin-bottom: var(--space-2);
+    color: var(--color-text-primary);
+}
+
+.lightbox-description {
+    font-size: var(--text-base);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-3);
+}
+
+.lightbox-counter {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    letter-spacing: 2px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: var(--space-4);
+    right: var(--space-4);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-secondary);
+    background: var(--color-bg-glass);
+    border-radius: 50%;
+    transition: all var(--transition-base);
+    z-index: 201;
+}
+
+.lightbox-close:hover {
+    color: var(--color-text-primary);
+    background: var(--color-bg-tertiary);
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-secondary);
+    background: var(--color-bg-glass);
+    border-radius: 50%;
+    transition: all var(--transition-base);
+    z-index: 201;
+}
+
+.lightbox-nav:hover {
+    color: var(--color-text-primary);
+    background: var(--color-bg-tertiary);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-prev {
+    left: var(--space-4);
+}
+
+.lightbox-next {
+    right: var(--space-4);
+}
+
+@media (max-width: 768px) {
+    .lightbox {
+        padding: var(--space-4);
+    }
+
+    .lightbox-nav {
+        width: 44px;
+        height: 44px;
+    }
+
+    .lightbox-prev {
+        left: var(--space-2);
+    }
+
+    .lightbox-next {
+        right: var(--space-2);
+    }
+
+    .lightbox-close {
+        top: var(--space-2);
+        right: var(--space-2);
+        width: 40px;
+        height: 40px;
+    }
+}

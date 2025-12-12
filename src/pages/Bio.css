@@ -1,0 +1,119 @@
+.bio-page {
+    padding: var(--space-16) 0 var(--space-20);
+}
+
+.bio-content {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: var(--space-16);
+    align-items: center;
+}
+
+@media (max-width: 900px) {
+    .bio-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-10);
+    }
+}
+
+/* Bio Image */
+.bio-image-container {
+    position: relative;
+}
+
+.bio-image-wrapper {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.bio-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bio-image-accent {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            transparent 60%,
+            var(--color-accent-glow) 100%);
+    pointer-events: none;
+}
+
+/* Bio Text */
+.bio-label {
+    display: inline-block;
+    font-size: var(--text-sm);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--color-accent);
+    margin-bottom: var(--space-4);
+}
+
+.bio-title {
+    font-size: clamp(var(--text-4xl), 6vw, var(--text-5xl));
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: var(--space-8);
+}
+
+.bio-description {
+    margin-bottom: var(--space-10);
+}
+
+.bio-description p {
+    font-size: var(--text-lg);
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+    margin-bottom: var(--space-5);
+}
+
+.bio-description p:last-child {
+    margin-bottom: 0;
+}
+
+/* Stats */
+.bio-stats {
+    display: flex;
+    gap: var(--space-10);
+    margin-bottom: var(--space-10);
+    padding: var(--space-8) 0;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+@media (max-width: 500px) {
+    .bio-stats {
+        flex-direction: column;
+        gap: var(--space-6);
+    }
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.stat-number {
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    color: var(--color-accent);
+    font-family: var(--font-display);
+}
+
+.stat-label {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.bio-cta {
+    display: flex;
+    gap: var(--space-4);
+}
